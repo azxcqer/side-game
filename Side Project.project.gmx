@@ -7,6 +7,7 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\s_player</sprite>
+    <sprite>sprites\s_wall</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_temp</background>
@@ -21,6 +22,7 @@
       <object>objects\ct_init</object>
     </objects>
     <object>objects\o_player</object>
+    <object>objects\cl_wall</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\r_init</room>

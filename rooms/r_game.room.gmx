@@ -53,6 +53,10 @@
   <instances>
     <instance objName="o_player" x="40" y="40" name="inst_0260AB88" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ct_main" x="0" y="0" name="inst_6E6F6C84" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="cl_wall" x="0" y="-4" name="inst_3EDC4669" locked="0" code="" scaleX="20" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="cl_wall" x="-4" y="-4" name="inst_640E30FA" locked="0" code="" scaleX="1" scaleY="21" colour="4294967295" rotation="0"/>
+    <instance objName="cl_wall" x="-4" y="80" name="inst_2BDE3212" locked="0" code="" scaleX="22" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="cl_wall" x="80" y="-4" name="inst_9A248822" locked="0" code="" scaleX="1" scaleY="21" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

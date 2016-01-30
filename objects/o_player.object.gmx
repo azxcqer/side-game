@@ -94,9 +94,24 @@ if !global.paused
             <kind>1</kind>
             <string>///moving
 
-y += sign(dir_v)
-x += sign(dir_h)
+var ver = sign(dir_v)*vsp,
+    hor = sign(dir_h)*vsp;
+    
 
+if (place_meeting(x,y+ver,cl_wall))
+{
+
+    ver = 0;
+}
+
+y += ver
+
+if (place_meeting(x+hor,y,cl_wall))
+{
+    hor = 0
+}
+
+x += hor
 </string>
           </argument>
         </arguments>
