@@ -28,6 +28,7 @@
             <string>///global vars
 
 global.paused = false
+global.gameon = false
 </string>
           </argument>
         </arguments>
