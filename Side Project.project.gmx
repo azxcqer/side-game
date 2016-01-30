@@ -8,6 +8,7 @@
   <sprites name="sprites">
     <sprite>sprites\s_player</sprite>
     <sprite>sprites\s_wall</sprite>
+    <sprite>sprites\s_enemy</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_temp</background>
@@ -15,6 +16,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\backgrounder.gml</script>
+    <script>scripts\dirrecter.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="controllers">
@@ -23,6 +25,7 @@
     </objects>
     <object>objects\o_player</object>
     <object>objects\cl_wall</object>
+    <object>objects\cl_enemy</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\r_init</room>
