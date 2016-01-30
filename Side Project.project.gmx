@@ -8,6 +8,9 @@
   <sprites name="sprites">
     <sprite>sprites\s_player</sprite>
     <sprite>sprites\s_wall</sprite>
+    <sprite>sprites\s_despawn</sprite>
+    <sprite>sprites\s_spawn</sprite>
+    <sprite>sprites\s_tool</sprite>
     <sprite>sprites\s_enemy</sprite>
   </sprites>
   <backgrounds name="background">
@@ -26,6 +29,11 @@
     </objects>
     <object>objects\o_player</object>
     <object>objects\cl_wall</object>
+    <objects name="tools">
+      <object>objects\cl_spawner</object>
+      <object>objects\cl_despawner</object>
+      <object>objects\cl_gate</object>
+    </objects>
     <object>objects\cl_enemy</object>
   </objects>
   <rooms name="rooms">
