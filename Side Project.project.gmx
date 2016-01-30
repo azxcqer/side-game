@@ -17,6 +17,7 @@
   <scripts name="scripts">
     <script>scripts\backgrounder.gml</script>
     <script>scripts\dirrecter.gml</script>
+    <script>scripts\draw_text_shadow.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="controllers">
