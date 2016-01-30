@@ -28,6 +28,7 @@
             <string>///init vars
 
 backgrounder()
+room_speed=60;
 </string>
           </argument>
         </arguments>
