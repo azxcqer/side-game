@@ -52,8 +52,10 @@ room_speed=60;
             <string>///view
     view_enabled = true;
     view_visible[0] = true;
-    view_wview[0] = 80;
-    view_hview[0] = 80;
+    view_wview[0] = 96;
+    view_hview[0] = 96;
+    view_xview[0] = 0
+    view_yview[0] = 0
     view_hborder[0] = view_wview[0] - 75;
     view_vborder[0] = view_hview[0] - 75;
 </string>
