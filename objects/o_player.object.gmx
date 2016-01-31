@@ -117,6 +117,15 @@ else {
     x=x
     y=y
 }
+
+if place_meeting(x, y, cl_enemy)
+{
+    global.gameon = false
+    instance_destroy()
+}
+
+global.pX = x
+global.pY = y
 </string>
           </argument>
         </arguments>
