@@ -26,9 +26,31 @@
           <argument>
             <kind>1</kind>
             <string>///global vars
-
+room_speed = 60
+//engine variables
 global.paused = false
+draw_set_font(f_def)
 global.gameon = false
+global.screenW = 0
+global.screenH = 0
+global.debug = false
+
+global.pX = 0
+global.pY = 0
+
+//game variables
+global.scr = 0
+global.hscr = 0
+global.dif = 0
+
+//dificulty variables
+global.defIdleTime = 20*room_speed
+global.defSpawnTime = 6*room_speed
+global.curIdleMax = 0
+global.curSpawnTime = 0
+
+//score variables
+
 </string>
           </argument>
         </arguments>

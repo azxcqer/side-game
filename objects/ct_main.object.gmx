@@ -26,9 +26,18 @@
           <argument>
             <kind>1</kind>
             <string>///init vars
-global.gameon = true
-backgrounder()
 room_speed=60;
+backgrounder()
+randomize()
+tick=0
+
+//game stuff
+global.gameon=true
+global.scr=0
+baseScore=1
+defIdle = global.defIdleTime
+defSpawn = global.defSpawnTime
+global.dif=1
 </string>
           </argument>
         </arguments>
@@ -80,38 +89,92 @@ room_speed=60;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///key reactions controls
-//locking these controls outside of the actual game rooms
+            <string>///extra controls
+//pause
+/*
 if global.gameon
 {
-//quit
-if keyboard_check_pressed(vk_escape) {game_end()}
-//restart
-if keyboard_check_pressed(ord("R")) 
+    if keyboard_check_pressed(ord("P"))
     {
-    restarting = true
+    pauser()
+    }
+}
+*/
+//quit
+if keyboard_check_pressed(vk_escape) 
+    {
+        score_save()
+        game_end()
+    }
+//restart
+if keyboard_check_pressed(ord("R"))
+    {
     room_restart()
     }
-//debugging
-if keyboard_check_pressed(ord("T")) {global.debugger = !global.debugger}
 //fullscreen
-if keyboard_check_pressed(ord("F")) 
+if keyboard_check_pressed(ord("F"))
 {
-    if window_get_fullscreen()
-    {
-       window_set_fullscreen(false);
-    }
-    else
-    {
-       window_set_fullscreen(true);
-    }
+    fullscreener()
 }
-//pause
-if keyboard_check_pressed(ord("P"))
+    
+//debugging
+if keyboard_check_pressed(ord("T"))
     {
-    global.paused = !global.paused
+        global.debug = !global.debug
     }
-}
+
+if keyboard_check_pressed(ord("Y"))
+    {
+        score_purge()
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///game step
+dificulty()
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///others
+///others
+global.screenH = window_get_height();
+global.screenW = window_get_width();
+//scoring()
+//dificulty()
 </string>
           </argument>
         </arguments>
@@ -138,13 +201,91 @@ if keyboard_check_pressed(ord("P"))
 
 if global.paused
 {
-    var message, tX, tY;
-    message =
+    var message =
         "PAUSED
         #Press P to continue";
-    tX = window_get_width()/2;
-    tY = window_get_height()/2;
-    draw_text_simple(tX, tY, message)
+   draw_text_simple(global.screenW/2,global.screenH/2, message)
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///scores
+draw_text_shadow(0,0,"Score: "+string(global.scr)+"#Multiplier: "+string(tick),c_white,c_black,1,fa_left,fa_top)
+
+draw_text_shadow(global.screenW,0,"Highscore#"+string(global.hscr),c_white,c_black,1,fa_right,fa_top)
+
+draw_text_shadow(global.screenW,global.screenH,"Dificulty: "+string(global.dif),c_white,c_black,1,fa_right,fa_bottom)
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///debug
+
+if global.debug
+{
+    draw_text_simple(global.screenW/2, 20, "D")
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///gameover
+
+if !global.gameon
+{
+    var message = "YOU LOSE
+                    #Press R to restart"
+    
+    draw_text_simple(global.screenW/2,global.screenH/2, message)
 }
 </string>
           </argument>
