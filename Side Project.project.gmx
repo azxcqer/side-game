@@ -9,6 +9,7 @@
     <sprite>sprites\s_player</sprite>
     <sprite>sprites\s_wall</sprite>
     <sprite>sprites\s_despawn</sprite>
+    <sprite>sprites\s_gate</sprite>
     <sprite>sprites\s_spawn</sprite>
     <sprite>sprites\s_tool</sprite>
     <sprite>sprites\s_enemy</sprite>
