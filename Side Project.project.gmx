@@ -4,7 +4,10 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\a_lvl</sound>
+    <sound>sound\a_spawn</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\s_player</sprite>
     <sprite>sprites\s_wall</sprite>
@@ -27,6 +30,9 @@
     <script>scripts\scoring.gml</script>
     <script>scripts\pauser.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\f_def</font>
+  </fonts>
   <objects name="objects">
     <objects name="controllers">
       <object>objects\ct_main</object>
