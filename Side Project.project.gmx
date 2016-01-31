@@ -28,7 +28,6 @@
     <script>scripts\dificulty.gml</script>
     <script>scripts\fullscreener.gml</script>
     <script>scripts\scoring.gml</script>
-    <script>scripts\pauser.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\f_def</font>
