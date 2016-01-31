@@ -21,6 +21,10 @@
     <script>scripts\backgrounder.gml</script>
     <script>scripts\dirrecter.gml</script>
     <script>scripts\draw_text_shadow.gml</script>
+    <script>scripts\dificulty.gml</script>
+    <script>scripts\fullscreener.gml</script>
+    <script>scripts\scoring.gml</script>
+    <script>scripts\pauser.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="controllers">
