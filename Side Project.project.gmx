@@ -18,6 +18,7 @@
     <sprite>sprites\s_spawn</sprite>
     <sprite>sprites\s_tool</sprite>
     <sprite>sprites\s_enemy</sprite>
+    <sprite>sprites\s_ritual</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_temp</background>
