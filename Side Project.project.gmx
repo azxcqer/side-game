@@ -7,6 +7,8 @@
   <sounds name="sound">
     <sound>sound\a_lvl</sound>
     <sound>sound\a_spawn</sound>
+    <sound>sound\a_death</sound>
+    <sound>sound\a_pick</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\s_player</sprite>
