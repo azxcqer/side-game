@@ -32,6 +32,7 @@
     <script>scripts\scoring.gml</script>
     <script>scripts\look_at_you.gml</script>
     <script>scripts\turnapalooza.gml</script>
+    <script>scripts\glower.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\f_def</font>
