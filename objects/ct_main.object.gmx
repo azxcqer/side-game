@@ -32,12 +32,17 @@ randomize()
 tick=0
 
 //game stuff
-global.gameon=true
-global.scr=0
-baseScore=1
+global.gameon=false
 defIdle = global.defIdleTime
 defSpawn = global.defSpawnTime
 global.dif=1
+global.intro = true
+
+//score
+global.multiplier = 1
+global.scoreDelta = 2000
+global.scr=0
+baseScore=1
 </string>
           </argument>
         </arguments>
@@ -116,13 +121,22 @@ if keyboard_check_pressed(ord("F"))
 {
     fullscreener()
 }
+
+//intro
+if keyboard_check_pressed(vk_anykey)
+and !global.gameon
+and global.intro
+{
+    global.intro = false
+    global.gameon = true
+}
     
 //debugging
 if keyboard_check_pressed(ord("T"))
     {
         global.debug = !global.debug
     }
-
+/*
 if keyboard_check_pressed(ord("Y"))
     {
         score_purge()
@@ -149,6 +163,7 @@ if keyboard_check_pressed(ord("Y"))
             <kind>1</kind>
             <string>///game step
 dificulty()
+scoring()
 </string>
           </argument>
         </arguments>
@@ -170,11 +185,55 @@ dificulty()
           <argument>
             <kind>1</kind>
             <string>///others
-///others
 global.screenH = window_get_height();
 global.screenW = window_get_width();
-//scoring()
-//dificulty()
+surface_resize(application_surface, global.screenW, global.screenH)
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>score_save()
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>score_load()
 </string>
           </argument>
         </arguments>
@@ -281,9 +340,45 @@ if global.debug
             <string>///gameover
 
 if !global.gameon
+and !global.intro
 {
     var message = "YOU LOSE
                     #Press R to restart"
+    
+    draw_text_simple(global.screenW/2,global.screenH/2, message)
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///intro
+if global.intro
+{
+    var message = "You perform the ritual to collect mystical gems
+                    #but as the void comes closer to our world with its riches
+                    #so does it's curses.
+                    #
+                    #- Collect gems
+                    #- Tentacles will spawn and throw fireball. Avoid them.
+                    #- The longed you survive the harder it gets...
+                    #... but you will be rewarded.
+                    #PRESS ANY KEY TO START"
     
     draw_text_simple(global.screenW/2,global.screenH/2, message)
 }

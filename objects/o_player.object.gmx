@@ -60,7 +60,8 @@ vsp = 0.5
             <kind>1</kind>
             <string>///controls
 
-if !global.paused 
+if !global.paused
+and global.gameon
 {
     //Get the player's input
     key_right = keyboard_check(vk_right);
@@ -121,11 +122,42 @@ else {
 if place_meeting(x, y, cl_enemy)
 {
     global.gameon = false
+    audio_play_sound(a_death,1,false)
     instance_destroy()
 }
 
 global.pX = x
 global.pY = y
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///sprite transform
+
+if dir_h == -1 //going left
+{
+    image_xscale=-1;
+}
+if dir_h == 1 //going right
+{
+    image_xscale=+1;
+}
 </string>
           </argument>
         </arguments>

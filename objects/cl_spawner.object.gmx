@@ -3,7 +3,7 @@
   <spriteName>s_spawn</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -32,6 +32,7 @@ timeMax = 10*room_speed
 spawnTime = room_speed*3
 image_speed = 0
 alphaStep = 0
+look_at_you(o_player)
 </string>
           </argument>
         </arguments>
@@ -135,9 +136,12 @@ alphaStep = 1/alphaTime
           <argument>
             <kind>1</kind>
             <string>///alarming
-if active = false
+if !global.intro
 {
-    alarm[0] = irandom(global.curIdleMax)
+    if active = false
+    {
+        alarm[0] = irandom(global.curIdleMax)
+    }
 }
 </string>
           </argument>
@@ -160,6 +164,8 @@ if active = false
           <argument>
             <kind>1</kind>
             <string>///transforming sprite sprite
+turnapalooza()
+
 visible = active
 if active
 {
@@ -171,33 +177,6 @@ else
     image_index = 0
     image_alpha = 0
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="4">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///setting some things
-//this is here because I don't actually need to change it on the step event, because the player doesn't actually change his horizontal position at all.
-/*
-look_at_you(c_you)
-turnapalooza()
 </string>
           </argument>
         </arguments>

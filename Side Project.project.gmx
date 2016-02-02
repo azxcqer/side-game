@@ -51,6 +51,8 @@
       <object>objects\cl_gate</object>
     </objects>
     <object>objects\cl_enemy</object>
+    <object>objects\cl_spawner_old</object>
+    <object>objects\o_ritual</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\r_init</room>
