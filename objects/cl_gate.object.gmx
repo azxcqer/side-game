@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>active = false
 alphaStep = 0
+image_speed=0.1
 </string>
           </argument>
         </arguments>
@@ -98,7 +99,7 @@ alphaStep = 1/alphaTime
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///sprite stransformation
+            <string>///sprite transformation
 visible = active
 if !global.intro
 {
@@ -108,7 +109,6 @@ if !global.intro
     }
     if active
     {
-        image_speed = 0.1*global.dif
         image_alpha -= alphaStep
     }
 }
