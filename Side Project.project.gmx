@@ -48,9 +48,9 @@
     <objects name="tools">
       <object>objects\cl_spawner</object>
       <object>objects\cl_despawner</object>
-      <object>objects\cl_gate</object>
     </objects>
     <object>objects\cl_enemy</object>
+    <object>objects\cl_gate</object>
     <object>objects\cl_spawner_old</object>
     <object>objects\o_ritual</object>
   </objects>
