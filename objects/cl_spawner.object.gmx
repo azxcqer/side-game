@@ -85,6 +85,8 @@ switch(type)
 instance_create(x,y,cl_enemy)
 audio_play_sound(a_spawn,1,false)
 active = false
+sprite_index=s_spawn
+image_speed=0
 </string>
           </argument>
         </arguments>
@@ -113,6 +115,8 @@ active=true
 alarm[1]=alphaTime
 
 alphaStep = 1/alphaTime
+sprite_index=sp_n_spawn
+image_speed=0.2
 </string>
           </argument>
         </arguments>
@@ -169,7 +173,7 @@ turnapalooza()
 visible = active
 if active
 {
-    image_index = 1
+    //image_index = 1
     image_alpha+=alphaStep
 }
 else

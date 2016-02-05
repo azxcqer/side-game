@@ -16,6 +16,7 @@
     <sprite>sprites\s_despawn</sprite>
     <sprite>sprites\s_gate</sprite>
     <sprite>sprites\s_spawn</sprite>
+    <sprite>sprites\sp_n_spawn</sprite>
     <sprite>sprites\s_tool</sprite>
     <sprite>sprites\s_enemy</sprite>
     <sprite>sprites\s_ritual</sprite>
