@@ -55,34 +55,7 @@ look_at_you(o_player)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*
-var who
-switch(type)
-{
-    case 0:
-    who = o_r
-    break
-    case 1:
-    who = o_g
-    break
-    case 2:
-    who = o_b
-    break
-    case 3:
-    who = o_p
-    break
-    case 4:
-    who = o_y
-    break
-    case 5:
-    who = o_br
-    break
-    case 6:
-    who = o_pu
-    break
-}
-*/
-instance_create(x,y,cl_enemy)
+            <string>instance_create(x,y,cl_enemy)
 audio_play_sound(a_spawn,1,false)
 active = false
 sprite_index=s_spawn
