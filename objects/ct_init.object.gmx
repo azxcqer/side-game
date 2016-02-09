@@ -34,6 +34,7 @@ global.gameon = false
 global.screenW = 0
 global.screenH = 0
 global.debug = false
+global.introloop = 0
 
 global.pX = 0
 global.pY = 0

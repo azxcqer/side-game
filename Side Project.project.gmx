@@ -39,6 +39,7 @@
       <script>scripts\dificulty.gml</script>
       <script>scripts\fullscreener.gml</script>
       <script>scripts\draw_text_shadow.gml</script>
+      <script>scripts\GO.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">

@@ -112,13 +112,26 @@ if keyboard_check_pressed(ord("F"))
     fullscreener()
 }
 
+//starting
+if !global.gameon
+{
+    //intro
+    if global.intro
+    {
+        if keyboard_check_pressed(vk_space)
+        or global.introloop &gt;= 3
+        {
+            GO()
+        }
+    }
+}
+
 //intro
 if keyboard_check_pressed(vk_space)
 and !global.gameon
 and global.intro
 {
-    global.intro = false
-    global.gameon = true
+    GO()
 }
     
 //debugging
