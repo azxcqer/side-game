@@ -50,12 +50,12 @@
       <object>objects\ct_main</object>
       <object>objects\ct_init</object>
     </objects>
-    <object>objects\o_player</object>
-    <object>objects\cl_wall</object>
     <objects name="tools">
       <object>objects\cl_spawner</object>
       <object>objects\cl_despawner</object>
     </objects>
+    <object>objects\o_player</object>
+    <object>objects\cl_wall</object>
     <object>objects\cl_enemy</object>
     <object>objects\cl_gate</object>
     <object>objects\o_ritual</object>
