@@ -95,16 +95,6 @@ baseScore=1
           <argument>
             <kind>1</kind>
             <string>///extra controls
-//pause
-/*
-if global.gameon
-{
-    if keyboard_check_pressed(ord("P"))
-    {
-    pauser()
-    }
-}
-*/
 //quit
 if keyboard_check_pressed(vk_escape) 
     {
