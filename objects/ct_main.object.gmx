@@ -125,14 +125,6 @@ if !global.gameon
         }
     }
 }
-
-//intro
-if keyboard_check_pressed(vk_space)
-and !global.gameon
-and global.intro
-{
-    GO()
-}
     
 //debugging
 if keyboard_check_pressed(ord("T"))
