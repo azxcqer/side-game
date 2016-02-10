@@ -16,6 +16,7 @@
     <sprite>sprites\s_despawn</sprite>
     <sprite>sprites\s_gate</sprite>
     <sprite>sprites\s_spawn</sprite>
+    <sprite>sprites\sp_n_spawn</sprite>
     <sprite>sprites\s_tool</sprite>
     <sprite>sprites\s_enemy</sprite>
     <sprite>sprites\s_ritual</sprite>
@@ -25,15 +26,21 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\backgrounder.gml</script>
-    <script>scripts\dirrecter.gml</script>
-    <script>scripts\draw_text_shadow.gml</script>
-    <script>scripts\dificulty.gml</script>
-    <script>scripts\fullscreener.gml</script>
-    <script>scripts\scoring.gml</script>
-    <script>scripts\look_at_you.gml</script>
-    <script>scripts\turnapalooza.gml</script>
-    <script>scripts\glower.gml</script>
+    <scripts name="animation">
+      <script>scripts\backgrounder.gml</script>
+      <script>scripts\glower.gml</script>
+      <script>scripts\turnapalooza.gml</script>
+      <script>scripts\look_at_you.gml</script>
+      <script>scripts\shooting_steps.gml</script>
+      <script>scripts\dirrecter.gml</script>
+    </scripts>
+    <scripts name="engine">
+      <script>scripts\scoring.gml</script>
+      <script>scripts\dificulty.gml</script>
+      <script>scripts\fullscreener.gml</script>
+      <script>scripts\draw_text_shadow.gml</script>
+      <script>scripts\GO.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\f_def</font>
@@ -43,15 +50,14 @@
       <object>objects\ct_main</object>
       <object>objects\ct_init</object>
     </objects>
-    <object>objects\o_player</object>
-    <object>objects\cl_wall</object>
     <objects name="tools">
       <object>objects\cl_spawner</object>
       <object>objects\cl_despawner</object>
-      <object>objects\cl_gate</object>
     </objects>
+    <object>objects\o_player</object>
+    <object>objects\cl_wall</object>
     <object>objects\cl_enemy</object>
-    <object>objects\cl_spawner_old</object>
+    <object>objects\cl_gate</object>
     <object>objects\o_ritual</object>
   </objects>
   <rooms name="rooms">

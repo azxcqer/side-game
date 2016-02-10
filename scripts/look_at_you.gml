@@ -1,4 +1,4 @@
-///look_at_you(obj)
+///look_at_you(target)
 var obj = argument0,
 
 //facing the right direction

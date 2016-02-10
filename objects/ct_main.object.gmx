@@ -64,14 +64,14 @@ baseScore=1
           <argument>
             <kind>1</kind>
             <string>///view
-    view_enabled = true;
-    view_visible[0] = true;
-    view_wview[0] = 96;
-    view_hview[0] = 96;
-    view_xview[0] = 0
-    view_yview[0] = 0
-    view_hborder[0] = view_wview[0] - 75;
-    view_vborder[0] = view_hview[0] - 75;
+view_enabled = true;
+view_visible[0] = true;
+view_wview[0] = 96;
+view_hview[0] = 96;
+view_xview[0] = 0
+view_yview[0] = 0
+view_hborder[0] = view_wview[0] - 75;
+view_vborder[0] = view_hview[0] - 75;
 </string>
           </argument>
         </arguments>
@@ -95,16 +95,6 @@ baseScore=1
           <argument>
             <kind>1</kind>
             <string>///extra controls
-//pause
-/*
-if global.gameon
-{
-    if keyboard_check_pressed(ord("P"))
-    {
-    pauser()
-    }
-}
-*/
 //quit
 if keyboard_check_pressed(vk_escape) 
     {
@@ -122,13 +112,18 @@ if keyboard_check_pressed(ord("F"))
     fullscreener()
 }
 
-//intro
-if keyboard_check_pressed(vk_anykey)
-and !global.gameon
-and global.intro
+//starting
+if !global.gameon
 {
-    global.intro = false
-    global.gameon = true
+    //intro
+    if global.intro
+    {
+        if keyboard_check_pressed(vk_space)
+        or global.introloop &gt;= 3
+        {
+            GO()
+        }
+    }
 }
     
 //debugging
@@ -136,6 +131,16 @@ if keyboard_check_pressed(ord("T"))
     {
         global.debug = !global.debug
     }
+//after death restart
+if !global.gameon
+and !global.intro
+{
+    if keyboard_check_pressed(vk_enter)
+    or keyboard_check_pressed(vk_space)
+    {
+        room_restart()
+    }
+}
 /*
 if keyboard_check_pressed(ord("Y"))
     {
@@ -257,7 +262,6 @@ surface_resize(application_surface, global.screenW, global.screenH)
           <argument>
             <kind>1</kind>
             <string>///paused text
-
 if global.paused
 {
     var message =
@@ -312,7 +316,6 @@ draw_text_shadow(global.screenW,global.screenH,"Dificulty: "+string(global.dif),
           <argument>
             <kind>1</kind>
             <string>///debug
-
 if global.debug
 {
     draw_text_simple(global.screenW/2, 20, "D")
@@ -338,12 +341,11 @@ if global.debug
           <argument>
             <kind>1</kind>
             <string>///gameover
-
 if !global.gameon
 and !global.intro
 {
     var message = "YOU LOSE
-                    #Press R to restart"
+                    #Press R, ENTER or SPACE to restart"
     
     draw_text_simple(global.screenW/2,global.screenH/2, message)
 }
@@ -378,7 +380,7 @@ if global.intro
                     #- Tentacles will spawn and throw fireball. Avoid them.
                     #- The longed you survive the harder it gets...
                     #... but you will be rewarded.
-                    #PRESS ANY KEY TO START"
+                    #PRESS SPACE TO START"
     
     draw_text_simple(global.screenW/2,global.screenH/2, message)
 }

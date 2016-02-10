@@ -27,7 +27,6 @@
             <kind>1</kind>
             <string>image_speed=0.05
 glower_init()
-
 </string>
           </argument>
         </arguments>
@@ -51,7 +50,6 @@ glower_init()
           <argument>
             <kind>1</kind>
             <string>glower()
-
 </string>
           </argument>
         </arguments>
