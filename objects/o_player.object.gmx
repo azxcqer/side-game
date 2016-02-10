@@ -26,12 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>//vars
-
 key_right = 0
 key_left = 0
 key_up = 0
 key_down = 0
-
 
 dir_h = 0
 dir_v = 0
@@ -59,7 +57,6 @@ vsp = 0.5
           <argument>
             <kind>1</kind>
             <string>///controls
-
 if !global.paused
 and global.gameon
 {
@@ -93,7 +90,6 @@ and global.gameon
           <argument>
             <kind>1</kind>
             <string>///moving
-
 var ver = sign(dir_v)*vsp,
     hor = sign(dir_h)*vsp;
     
@@ -149,7 +145,6 @@ global.pY = y
           <argument>
             <kind>1</kind>
             <string>///sprite transform
-
 if dir_h == -1 //going left
 {
     image_xscale=-1;

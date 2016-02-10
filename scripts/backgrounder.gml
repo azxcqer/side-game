@@ -1,5 +1,4 @@
 ///backgrounder()
-
 if background_index[0] = -1
     {
     background_index[0] = bg_temp
