@@ -30,3 +30,15 @@ The theme was ritual and I actually came with the tie in to the theme after the 
 ## More stuff
 * You can always check [my high-tech](http://www.ardydo.com) site to see whatever links I have to stuff I'm doing.
 * My [itch.io](games.ardydo.com) page tho have all of my released games.
+
+## Licensing
+
+### Code
+
+All code are distributed under the [MIT License](LICENSE)
+
+### Assets
+
+Unless mentioned otherwise, all art assets (files in assets/ and with the .ase and .png extensions) are distributed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](http://creativecommons.org/licenses/by-nc-nd/4.0/)
+
+Artist: André Andrade
